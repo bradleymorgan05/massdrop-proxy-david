@@ -9,14 +9,9 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req, res) => {
-  //send a response that includes html
   res.sendFile(path.join(__dirname, './public/index.html'));
 })
 
-// app.get('/:id/', (req, res) => {
-//   console.log(req.params.id);
-//   // axios.get('http://localhost:3007/id')
-// })
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);

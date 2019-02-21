@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-// const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 3006;
 
@@ -14,5 +13,5 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`server running at: http://localhost:${port}`);
+  console.log(`server running at: http://ec2-18-219-151-193.us-east-2.compute.amazonaws.com:${port}`);
 });
